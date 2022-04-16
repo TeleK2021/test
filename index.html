@@ -180,20 +180,20 @@
         }
 
         function parse() {
-            var yohoho = document.querySelector('#yohoho');
-            if (title && title.value && yohoho) {
+            var kinobd = document.querySelector('#kinobd');
+            if (title && title.value && kinobd) {
                 if (/kinopoisk\.ru/i.test(title.value)) {
                     var exec = /(film\/|movie\/).*?([0-9]{3,7})\//gi.exec(title.value);
                     if (exec && exec[2]) {
-                        yohoho.dataset.kinopoisk = exec[2];
-                        window.location.hash = '#' + yohoho.dataset.kinopoisk;
-                        document.title = 'КиноПоиск: ' + yohoho.dataset.kinopoisk;
+                        kinobd.dataset.kinopoisk = exec[2];
+                        window.location.hash = '#' + kinobd.dataset.kinopoisk;
+                        document.title = 'КиноПоиск: ' + kinobd.dataset.kinopoisk;
                     }
                 } else if (/^\d+$/.test(title.value)) {
-                    yohoho.dataset.kinopoisk = title.value;
+                    kinobd.dataset.kinopoisk = title.value;
                     window.location.hash = '#' + title.value;
                 } else {
-                    yohoho.dataset.title = title.value;
+                    kinobd.dataset.title = title.value;
                     window.location.hash = '#' + title.value;
                 }
                 items = [];
