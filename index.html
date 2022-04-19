@@ -70,25 +70,22 @@
 
 
 <div class="search-line">
-    <div id="kinobd" data-tv="1" data-resize="1"
+    <div id="kinoplayertop" data-tv="1" data-resize="1"
          
          
-         data-player="hdvb, ustore, videocdn,collaps,kodik,trailer,torrent"
+         data-player="shearch, dbhdvb, ustore, videocdn,collaps,kodik,trailer,torrent"
          data-trailer="youtube,collaps"
          data-button="videocdn: Плеер {Q}, collaps: Плеер {Q}, hdvb: Плеер {Q}, ustore: Плеер {Q}, kodik: Плеер {Q}, bazon: Плеер {Q}"
          data-videocdn="9LCA8OrUtAVvwD3xlFYmIpUok7hNzjtB:UID"
-         data-ustore="64e813f11bdd0cfe4cdd0b2ccc4a4eab">
-	 <div class="brand">TeleKinozal</div>
-         <div class="form">
-            <input type="text" placeholder="Название фильма / ID КиноПоиск" id="search-title" name="title" style="width: 70%">
-            <input type="button" id="search" value="Найти">
-        </div>
-     </div>
+         data-ustore="64e813f11bdd0cfe4cdd0b2ccc4a4eab"
+	 data-bazon="a2b201cf0fb863391fe49333812b7071">
+        
+    </div>
 	<a target="_blank" rel="nofollow" href="https://telekinozal.ru/mobile.html">
-<img src="Stake_Casino_970x90.gif" width="100%" height="auto" />
+<img src="images/CPA_2_-_gif-728x90px-Leaderboard_bFMzdVI.gif" width="100%" height="auto" />
 </div>
 
-<script src="https://kinobd.ru/js/player_.js"></script>
+<script src="//kinoplayer.top/top.js"></script>
     
 <div class="index-seo">
 
@@ -180,20 +177,20 @@
         }
 
         function parse() {
-            var kinobd = document.querySelector('#kinobd');
-            if (title && title.value && kinobd) {
+            var yohoho = document.querySelector('#yohoho');
+            if (title && title.value && yohoho) {
                 if (/kinopoisk\.ru/i.test(title.value)) {
                     var exec = /(film\/|movie\/).*?([0-9]{3,7})\//gi.exec(title.value);
                     if (exec && exec[2]) {
-                        kinobd.dataset.kinopoisk = exec[2];
-                        window.location.hash = '#' + kinobd.dataset.kinopoisk;
-                        document.title = 'КиноПоиск: ' + kinobd.dataset.kinopoisk;
+                        yohoho.dataset.kinopoisk = exec[2];
+                        window.location.hash = '#' + yohoho.dataset.kinopoisk;
+                        document.title = 'КиноПоиск: ' + yohoho.dataset.kinopoisk;
                     }
                 } else if (/^\d+$/.test(title.value)) {
-                    kinobd.dataset.kinopoisk = title.value;
+                    yohoho.dataset.kinopoisk = title.value;
                     window.location.hash = '#' + title.value;
                 } else {
-                    kinobd.dataset.title = title.value;
+                    yohoho.dataset.title = title.value;
                     window.location.hash = '#' + title.value;
                 }
                 items = [];
